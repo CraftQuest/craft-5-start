@@ -11,8 +11,7 @@ database:
     version: "8.0"
 hooks:
     post-start:
-        - exec: /var/www/html//scripts/import-if-empty.sh
-        - exec: /var/www/html/scripts/composer-install.sh
+        - exec: /var/www/html//scripts/ddev-startup.sh
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []

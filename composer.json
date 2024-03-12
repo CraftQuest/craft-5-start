@@ -1,7 +1,12 @@
 {
-  "name": "Craft5",
+  "name": "craftquest/craft-5-start",
+  "description": "A Craft 5 starter project to use with CraftQuest.io training tutorials.",
   "authors": [
-    "Ryan Irelan"
+    {
+      "name": "Ryan Irelan",
+      "email": "ryan@craftquest.io",
+      "homepage": "https://craftquest.io"
+    }
   ],
   "minimum-stability": "dev",
   "prefer-stable": true,

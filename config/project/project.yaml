@@ -5,9 +5,9 @@ email:
   transportType: craft\mail\transportadapters\Sendmail
 meta:
   __names__:
-    620caa93-2603-4217-9713-700e82292681: 'Public Schema' # Public Schema
-    4052097c-4aec-4442-af4c-df0a26b20065: 'Craft 5' # Craft 5
-    d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: 'Craft 5' # Craft 5
+    620caa93-2603-4217-9713-700e82292681: 'Public Schema'
+    4052097c-4aec-4442-af4c-df0a26b20065: 'Craft 5' # House Quest
+    d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: 'Craft 5' # House Quest
 system:
   edition: pro
   live: true

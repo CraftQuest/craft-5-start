@@ -1,13 +1,22 @@
-dateModified: 1710213864
+dateModified: 1713475759
 email:
   fromEmail: ryan@craftquest.io
   fromName: 'House Quest'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  local:
+    hasUrls: true
+    name: Local
+    settings:
+      path: '@webroot/local'
+    type: craft\fs\Local
+    url: '@web/local'
 meta:
   __names__:
-    620caa93-2603-4217-9713-700e82292681: 'Public Schema'
-    4052097c-4aec-4442-af4c-df0a26b20065: 'Craft 5' # House Quest
-    d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: 'Craft 5' # House Quest
+    9bebaaa3-6d87-4c75-afc8-f5f75ab950c4: Images # Images
+    620caa93-2603-4217-9713-700e82292681: 'Public Schema' # Public Schema
+    4052097c-4aec-4442-af4c-df0a26b20065: 'Craft 5' # Craft 5
+    d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: 'Craft 5' # Craft 5
 system:
   edition: pro
   live: true

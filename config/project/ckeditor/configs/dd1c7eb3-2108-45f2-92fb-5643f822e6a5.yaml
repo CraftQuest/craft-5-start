@@ -1,0 +1,15 @@
+headingLevels:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+name: 'Content Builder'
+toolbar:
+  - heading
+  - '|'
+  - bold
+  - italic
+  - link
+  - createEntry

@@ -1,191 +1,619 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta charset="utf-8" />
-    <title>Welcome to Craft CMS</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-    <meta name="referrer" content="origin-when-cross-origin" />
-    <style>
-        html,
-        body {
-            font-size: 16px;
-            -webkit-text-size-adjust: 100%;
-            height: 100%;
-            font-family: system-ui, BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-        }
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrailQuest Running</title>
 
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: hsl(212, 60%, 97%);
-            color: hsl(209, 18%, 30%);
-            display: flex;
-        }
-
-        h1 {
-            margin-top: 0;
-        }
-
-        h2 {
-            margin-top: 24px;
-            font-size: 1em;
-        }
-
-        h2:first-child {
-            margin-top: 0;
-        }
-
-        p {
-            line-height: 1.4em;
-            margin-bottom: 1.4em;
-        }
-
-        ul {
-            line-height: 1.3em;
-            padding-left: 20px;
-            margin-bottom: 0;
-        }
-
-        ul li {
-            margin-bottom: 0.35em;
-        }
-
-        a {
-            color: #0B69A3;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .go {
-            color: #0B69A3;
-        }
-
-        .go:after {
-            padding-left: 4px;
-            content: '→';
-            text-decoration: none !important;
-        }
-
-        small {
-            color: hsl(211, 11%, 59%);
-        }
-
-        code {
-            display: inline-block;
-            color: #EF4E4E;
-            padding: 0 2px;
-            background: hsl(212, 60%, 97%);
-            border-radius: 3px;
-            line-height: 1.3;
-            font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
-            font-size: 0.9em;
-        }
-
-        #container {
-            flex-grow: 1;
-        }
-
-        #modal {
-            background: #fff;
-        }
-
-        #aside {
-            background: hsl(212, 60%, 97%);
-        }
-
-        .content {
-            padding: 35px;
-            padding-left: calc(35px + env(safe-area-inset-left));
-            padding-right: calc(35px + env(safe-area-inset-right));
-        }
-
-        @media (min-width:768px) {
-            #modal {
-                display: flex;
-            }
-
-            #main {
-                width: 50%;
-                overflow: auto;
-            }
-
-            #aside {
-                width: 50%;
-                overflow: auto;
-            }
-        }
-
-        @media (min-width:768px) and (min-height: 376px) {
-            body {
-                background-color: hsl(212, 50%, 93%);
-                background-image: url("{{ view.getAssetManager().getPublishedUrl('@app/web/assets/installer/dist', true, 'images/installer-bg.png') }}");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-
-            #container {
-                display: flex;
-                padding: 24px;
-                align-items: center;
-                justify-content: center;
-            }
-
-            #modal {
-                height: 100%;
-                max-width: 800px;
-                max-height: 525px;
-                border-radius: 4px;
-                overflow: auto;
-                box-shadow: 0 25px 100px rgba(0, 0, 0, 0.5);
-            }
-
-            #aside {
-                overflow: auto;
-            }
-        }
-
-    </style>
+    <script type="module" crossorigin src="/assets/main.eeb45929.js"></script>
+    <link rel="stylesheet" href="/assets/main.9b87cd94.css">
 </head>
-<body class="ltr">
-<div id="container">
-    <div id="modal">
-        <div id="main">
-            <div class="content">
-                <h1>Welcome</h1>
-                <p>Thanks for installing Craft CMS!</p>
-                <p>You’re looking at the <code>index.twig</code> template file located in your
-                    <code>templates/</code> folder. Once you’re ready to start building out your site’s
-                    front end, you can replace this with something custom.</p>
-                <p>If you’re new to Craft CMS, take some time to check out the resources on the right
-                    when you get a chance&mdash;especially
-                    <a href="https://craftcms.com/discord" target="_blank">Discord</a>
-                    and <a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a>.
-                    The Craft community is full of smart, friendly, and helpful people!</p>
-                <p><span class="go"><a href="{{ cpUrl('') }}">Go to your control panel</a></span></p>
+<body>
+<div class="relative bg-primary">
+    <div class="max-w-full mx-auto px-4 sm:px-6">
+        <div
+                class="flex justify-between items-center py-6 md:justify-start md:space-x-10"
+        >
+            <div class="flex justify-start lg:w-0 lg:flex-1 text-white">
+                <div class="text-center">
+                    <a href="/">
+                        <img
+                                src="/images/logo.svg"
+                                class="h-16 w-auto hover:opacity-50"
+                                alt="TrailQuest"
+                        />
+                    </a>
+                </div>
             </div>
+            <div class="-mr-2 -my-2 md:hidden">
+                <button
+                        type="button"
+                        class="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        aria-expanded="false"
+                >
+                    <span class="sr-only">Open menu</span>
+                    <svg
+                            class="h-6 w-6"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            aria-hidden="true"
+                    >
+                        <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"
+                        />
+                    </svg>
+                </button>
+            </div>
+            <nav class="hidden md:flex space-x-10">
+                <a
+                        href="/adventures-listing.html"
+                        class="text-base font-medium text-gray-300 hover:text-secondary"
+                >
+                    Adventures
+                </a>
+                <a
+                        href="#"
+                        class="text-base font-medium text-gray-300 hover:text-secondary"
+                >
+                    Locations
+                </a>
+                <a
+                        href="#"
+                        class="text-base font-medium text-gray-300 hover:text-secondary"
+                >
+                    FAQs
+                </a>
+                <a
+                        href="/content-page.html"
+                        class="text-base font-medium text-gray-300 hover:text-secondary"
+                >
+                    About
+                </a>
+                <a
+                        href="/contact.html"
+                        class="text-base font-medium text-gray-300 hover:text-secondary"
+                >
+                    Contact
+                </a>
+            </nav>
         </div>
-        <div id="aside">
-            <div class="content">
-                <h2>Popular Resources</h2>
-                <ul>
-                    <li><a href="https://craftcms.com/docs/getting-started-tutorial/" target="_blank">Tutorial</a><br><small>Learn the basics.</small></li>
-                    <li><a href="https://craftcms.com/docs/4.x/" target="_blank">Documentation</a><br><small>Read the official docs.</small></li>
-                    <li><a href="https://craftcms.com/guides" target="_blank">Knowledge Base</a><br><small>Find answers to common problems.</small></li>
-                    <li><a href="https://twitter.com/hashtag/craftcms" target="_blank">#craftcms</a><br><small>See the latest tweets about Craft.</small></li>
-                    <li><a href="https://craftcms.com/discord" target="_blank">Discord</a><br><small>Meet the community.</small></li>
-                    <li><a href="http://craftcms.stackexchange.com/" target="_blank">Stack Exchange</a><br><small>Get help and help others.</small></li>
-                    <li><a href="https://craftquest.io/" target="_blank">CraftQuest</a><br><small>Watch unlimited video lessons and courses.</small></li>
-                    <li><a href="http://craftlinklist.com/" target="_blank">Craft Link List</a><br><small>Stay in-the-know.</small></li>
-                    <li><a href="https://nystudio107.com/blog" target="_blank">nystudio107 Blog</a><br><small>Learn Craft and modern web development.</small></li>
-                </ul>
+    </div>
+    <div
+            class="z-50 absolute top-0 inset-x-0 p-2 transition transform origin-top-right hidden"
+    >
+        <div
+                class="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-primary divide-y-2 divide-secondary"
+        >
+            <div class="pt-5 pb-6 px-5">
+                <div class="flex items-center justify-between">
+                    <a href="#">
+                        <img
+                                src="/images/logo.svg"
+                                class="h-12 w-auto hover:opacity-50"
+                                alt="TrailQuest"
+                        />
+                    </a>
+                    <div class="-mr-2">
+                        <button
+                                type="button"
+                                class="bg-secondary rounded-md p-2 inline-flex items-center justify-center text-white hover:text-primary hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"
+                        >
+                            <span class="sr-only">Close menu</span>
+                            <svg
+                                    class="h-6 w-6"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    fill="none"
+                                    viewBox="0 0 24 24"
+                                    stroke="currentColor"
+                                    aria-hidden="true"
+                            >
+                                <path
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                        stroke-width="2"
+                                        d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <nav class="grid gap-y-8">
+                        <a
+                                href="#"
+                                class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary"
+                        >
+                  <span class="ml-3 text-base font-medium text-white">
+                    Adventures
+                  </span>
+                        </a>
+
+                        <a
+                                href="#"
+                                class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary"
+                        >
+                  <span class="ml-3 text-base font-medium text-white">
+                    Locations
+                  </span>
+                        </a>
+
+                        <a
+                                href="#"
+                                class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary"
+                        >
+                  <span class="ml-3 text-base font-medium text-white">
+                    FAQs
+                  </span>
+                        </a>
+
+                        <a
+                                href="#"
+                                class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary"
+                        >
+                  <span class="ml-3 text-base font-medium text-white">
+                    About
+                  </span>
+                        </a>
+
+                        <a
+                                href="#"
+                                class="-m-3 p-3 flex items-center rounded-md hover:bg-secondary"
+                        >
+                  <span class="ml-3 text-base font-medium text-white">
+                    Contact
+                  </span>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <div class="py-6 px-5 space-y-6">
+                <div class="grid grid-cols-2 gap-y-4 gap-x-8">
+                    <a
+                            href="#"
+                            class="text-base font-medium text-white hover:text-secondary"
+                    >
+                        Big Bend National Park
+                    </a>
+
+                    <a
+                            href="#"
+                            class="text-base font-medium text-white hover:text-secondary"
+                    >
+                        Chamonix, France
+                    </a>
+
+                    <a
+                            href="#"
+                            class="text-base font-medium text-white hover:text-secondary"
+                    >
+                        Lake Tahoe
+                    </a>
+
+                    <a
+                            href="#"
+                            class="text-base font-medium text-white hover:text-secondary"
+                    >
+                        Lake Powell
+                    </a>
+
+                    <a
+                            href="#"
+                            class="text-base font-medium text-white hover:text-secondary"
+                    >
+                        Silverton, CO
+                    </a>
+
+                    <a
+                            href="#"
+                            class="text-base font-medium text-white hover:text-secondary"
+                    >
+                        Truckee, CA
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<main>
+    <div>
+        <div class="relative">
+            <div class="max-w-full">
+                <div class="relative sm:overflow-hidden">
+                    <div class="absolute inset-0">
+                        <img
+                                class="h-full w-full object-cover"
+                                src="/images/massimo-sartirana-W_mBu-aC2m8-unsplash.jpg"
+                                alt=""
+                        />
+                        <div
+                                class="absolute inset-0 bg-gray-300 mix-blend-multiply"
+                        ></div>
+                    </div>
+                    <div
+                            class="relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8"
+                    >
+                        <h1
+                                class="text-center text-5xl font-extrabold tracking-tight md:5xl sm:text-7xl lg:text-7xl"
+                        >
+                            <span class="block text-white">Get out and</span>
+                            <span class="block text-white">Explore the Trails</span>
+                        </h1>
+                        <p
+                                class="mt-6 max-w-lg mx-auto text-center text-xl text-white sm:max-w-3xl"
+                        >
+                            Fun running vacations and adventures for runners of all
+                            abilities. Wouldn't you rather run than sit at a pool and
+                            drink?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-white">
+        <div
+                class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
+        >
+            <div class="pb-5">
+                <h2 class="text-4xl leading-8 font-extrabold text-primary">
+                    Trail Running Adventures
+                </h2>
+                <p class="mt-2 max-w-4xl text-md text-gray-900">
+                    Choose your own trail adventure from locations across North
+                    America. Lace up and breathe in the fresh air. Welcome outside
+                    with TrailQuest.
+                </p>
+            </div>
+
+            <div
+                    class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+            >
+                <a href="/adventure-entry.html" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1100/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-gray-900">
+                        Grand Canyon R<sup>3</sup>
+                    </h3>
+                    <p class="mt-1 text-md font-medium text-gray-900">
+                        A rim to rim to rim run of the Grand Canyon.
+                    </p>
+                </a>
+
+                <a href="#" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1200/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-gray-900">
+                        Big Bend Bounce
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">
+                        The stunning views of Big Bend National Park and Big Bend State
+                        Park will put a bounce in your step.
+                    </p>
+                </a>
+
+                <a href="#" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1300/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-gray-900">
+                        R<sup>4</sup>
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">
+                        A rim to rim to rim run of the Grand Canyon.
+                    </p>
+                </a>
+
+                <a href="#" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1400/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg text-gray-900">R<sup>4</sup></h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">
+                        A rim to rim to rim run of the Grand Canyon.
+                    </p>
+                </a>
+                <a href="#" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1500/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-gray-900">
+                        R<sup>4</sup>
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">
+                        A rim to rim to rim run of the Grand Canyon.
+                    </p>
+                </a>
+                <a href="#" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1600/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-gray-900">
+                        R<sup>4</sup>
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">
+                        A rim to rim to rim run of the Grand Canyon.
+                    </p>
+                </a>
+                <a href="#" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1700/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-gray-900">
+                        R<sup>4</sup>
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">
+                        A rim to rim to rim run of the Grand Canyon.
+                    </p>
+                </a>
+                <a href="#" class="group">
+                    <div
+                            class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+                    >
+                        <img
+                                src="https://picsum.photos/1800/400"
+                                alt=""
+                                class="w-full h-full object-center object-cover group-hover:opacity-75"
+                        />
+                    </div>
+                    <h3 class="mt-4 text-lg font-bold text-gray-900">
+                        R<sup>4</sup>
+                    </h3>
+                    <p class="mt-1 text-sm font-medium text-gray-900">
+                        A rim to rim to rim run of the Grand Canyon.
+                    </p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <section class="overflow-hidden md:py-20 lg:py-20 bg-white">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative">
+                <blockquote class="">
+                    <div
+                            class="max-w-3xl mx-auto text-center text-4xl leading-9 font-bold text-secondary"
+                    >
+                        <p>
+                            &ldquo;A travel adventure that challenges even the most
+                            experienced trail runner. I love it!&rdquo;
+                        </p>
+                    </div>
+                    <footer class="mt-8">
+                        <div class="md:flex md:items-center md:justify-center">
+                            <div
+                                    class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center"
+                            >
+                                <div class="text-base font-medium text-gray-900">
+                                    Justine Jakes &nbsp;
+                                </div>
+                                <div class="text-base font-medium text-gray-500">
+                                    Austin, TX
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+    <section class="bg-white">
+        <div
+                class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
+        >
+            <div class="pb-5">
+                <h2 class="text-4xl leading-8 font-extrabold text-primary my-6">
+                    Trail Running Locations
+                </h2>
+            </div>
+            <div
+                    class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols- xl:grid-cols-4 xl:gap-x-6"
+            >
+                <ul>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black underline" href="/content-page.html"
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                </ul>
+                <ul>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                </ul>
+                <ul>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                </ul>
+                <ul>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                    <li class="pb-2">
+                        <a class="hover:text-secondary text-black" href=""
+                        >Adventure Vacation in Big Bend</a
+                        >
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="overflow-hidden md:py-20 lg:py-20 bg-white">
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="relative">
+                <blockquote class="">
+                    <div
+                            class="max-w-3xl mx-auto text-center text-4xl leading-9 font-bold text-secondary"
+                    >
+                        <p>
+                            &ldquo;The best way to spend my 5 days of annual vacation time
+                            away from the cubicle!&rdquo;
+                        </p>
+                    </div>
+                    <footer class="my-8">
+                        <div class="md:flex md:items-center md:justify-center">
+                            <div
+                                    class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center"
+                            >
+                                <div class="text-base font-medium text-gray-900">
+                                    Milton Waddams &nbsp;
+                                </div>
+                                <div class="text-base font-medium text-gray-500">
+                                    Austin, TX
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="bg-primary">
+    <div class="max-w-7xl mx-auto py-12 px-4 overflow-hidden sm:px-6 lg:px-8">
+        <nav
+                class="-mx-5 -my-2 flex flex-wrap justify-center"
+                aria-label="Footer"
+        >
+            <div class="px-5 py-2">
+                <a href="#" class="text-base text-gray-300 hover:text-secondary">
+                    Trail Adventures
+                </a>
+            </div>
+
+            <div class="px-5 py-2">
+                <a href="#" class="text-base text-gray-300 hover:text-secondary">
+                    Locations
+                </a>
+            </div>
+
+            <div class="px-5 py-2">
+                <a href="#" class="text-base text-gray-300 hover:text-secondary">
+                    FAQs
+                </a>
+            </div>
+
+            <div class="px-5 py-2">
+                <a href="#" class="text-base text-gray-300 hover:text-secondary">
+                    News
+                </a>
+            </div>
+        </nav>
+        <p class="mt-8 text-center text-base text-gray-400">
+            &copy; 2022 TrailQuests
+        </p>
+    </div>
+</footer>
+
 </body>
 </html>

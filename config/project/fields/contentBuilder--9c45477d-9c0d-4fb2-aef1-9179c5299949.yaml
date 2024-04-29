@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: contentBuilder
+instructions: null
+name: 'Content Builder'
+searchable: false
+settings:
+  createButtonLabel: 'New Content Module'
+  entryTypes:
+    - c6993518-0e82-4c97-86a2-4e1c53809b3a # Stats
+    - d2f46c56-a3c5-486e-a3a7-3cca9c903fbd # Call to Action
+    - 9af4493f-1473-46c6-8dc2-d79d5503d1b7 # Rich Text
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

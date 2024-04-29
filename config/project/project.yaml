@@ -1,4 +1,4 @@
-dateModified: 1713475759
+dateModified: 1713911110
 email:
   fromEmail: ryan@craftquest.io
   fromName: 'House Quest'
@@ -13,10 +13,37 @@ fs:
     url: '@web/local'
 meta:
   __names__:
+    1f955944-b52e-4cf8-bd5a-9b56ace12b65: URL # URL
+    5dc9e5cb-b638-41cc-9f01-03661aa13021: About # About
+    9a3d509f-0817-4939-ba9d-7bc072e7a2a6: 'Plain Text' # Plain Text
+    9adfa8da-c1a2-4e77-abfc-a08eae6316da: Adventures # Adventures
+    9af4493f-1473-46c6-8dc2-d79d5503d1b7: 'Rich Text' # Rich Text
     9bebaaa3-6d87-4c75-afc8-f5f75ab950c4: Images # Images
+    9c45477d-9c0d-4fb2-aef1-9179c5299949: 'Content Builder' # Content Builder
+    13c6c779-31ab-41e7-8332-126768d973d2: 'Rich Text Content' # Rich Text Content
+    389c2236-2701-4809-a0dc-8eec2db373d7: 'Text Link' # Text Link
+    446acbed-aedb-4e53-93dd-217608ed05d8: FAQs # FAQs
     620caa93-2603-4217-9713-700e82292681: 'Public Schema' # Public Schema
     4052097c-4aec-4442-af4c-df0a26b20065: 'Craft 5' # Craft 5
+    c3a92b48-89a3-4e38-9bba-392cdfbf35bf: Homepage # Homepage
+    c6d99cf5-e79d-447e-bbfd-299ebd88db00: 'Content Builder CK' # Content Builder CK
+    c6993518-0e82-4c97-86a2-4e1c53809b3a: Stats # Stats
+    d2f46c56-a3c5-486e-a3a7-3cca9c903fbd: 'Call to Action' # Call to Action
     d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: 'Craft 5' # Craft 5
+    d223214a-558a-42c8-bb24-9f3173bd142e: Homepage # Homepage
+    dd1c7eb3-2108-45f2-92fb-5643f822e6a5: 'Content Builder' # Content Builder
+    de9912bf-cf02-4036-9107-e326c86f86bf: Adventures # Adventures
+    e2a5f92b-4394-4126-bb61-58c2f20f29f4: 'Text Link' # Text Link
+    ece096c6-0d0e-47d3-86e3-b8c859b1a8a9: CTA # CTA
+    f0b04f8f-2d8b-4385-8b15-8c41f7bac65a: Simple # Simple
+    f7467145-3196-4d29-ba2f-d665cef1885a: Images # Images
+    fa3a842d-5920-4d3a-8ab8-907575c75b42: Image # Image
+    ff5e89b3-e3c1-40fc-b160-6e63f32ac3bc: 'Simple Table' # Simple Table
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
 system:
   edition: pro
   live: true

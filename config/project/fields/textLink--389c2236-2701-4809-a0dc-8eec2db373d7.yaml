@@ -1,0 +1,20 @@
+columnSuffix: null
+handle: textLink
+instructions: null
+name: 'Text Link'
+searchable: false
+settings:
+  createButtonLabel: null
+  entryTypes:
+    - e2a5f92b-4394-4126-bb61-58c2f20f29f4 # Text Link
+  includeTableView: false
+  maxEntries: 1
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

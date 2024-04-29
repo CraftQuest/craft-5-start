@@ -1,0 +1,80 @@
+color: null
+fieldLayouts:
+  e760e751-a548-48f1-bb77-8ffc0ae9cd2f:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 8fe92fff-85e9-4cff-b1a3-1f5f571328f5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 9a3d509f-0817-4939-ba9d-7bc072e7a2a6 # Plain Text
+            handle: linkText
+            includeInCards: false
+            instructions: null
+            label: 'Link Text'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1d7f2a40-2b04-43d8-bafa-a7bddf6bb908
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: 1f955944-b52e-4cf8-bd5a-9b56ace12b65 # URL
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ddc7b8a4-e78a-4de1-a80e-0d06f2da811c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 313b9d6a-d1a2-45b0-92fa-3570e2e4ba70
+        userCondition: null
+handle: textLink
+hasTitleField: false
+icon: link
+name: 'Text Link'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{linkText}'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

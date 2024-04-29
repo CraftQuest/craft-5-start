@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: contentBuilderCk
+instructions: null
+name: 'Content Builder CK'
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: dd1c7eb3-2108-45f2-92fb-5643f822e6a5 # Content Builder
+  createButtonLabel: 'New Content Module'
+  defaultTransform: null
+  enableSourceEditingForNonAdmins: false
+  entryTypes:
+    - c6993518-0e82-4c97-86a2-4e1c53809b3a # Stats
+    - d2f46c56-a3c5-486e-a3a7-3cca9c903fbd # Call to Action
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field

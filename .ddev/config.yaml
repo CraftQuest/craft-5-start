@@ -1,4 +1,4 @@
-name: craft5-start
+name: trailquest5
 type: craftcms
 docroot: web
 php_version: "8.2"

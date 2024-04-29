@@ -1,0 +1,56 @@
+columnSuffix: null
+handle: simpleTable
+instructions: null
+name: 'Simple Table'
+searchable: false
+settings:
+  addRowLabel: 'Add a stat'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - Name
+            -
+              - handle
+              - name
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - Value
+            -
+              - handle
+              - value
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: 4
+  minRows: 2
+  staticRows: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Table

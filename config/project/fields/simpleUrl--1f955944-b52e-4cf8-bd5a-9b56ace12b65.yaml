@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: simpleUrl
+instructions: null
+name: URL
+searchable: false
+settings:
+  maxLength: 255
+  types:
+    - url
+    - tel
+    - email
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Url

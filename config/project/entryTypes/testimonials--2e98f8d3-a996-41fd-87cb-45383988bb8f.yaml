@@ -1,10 +1,25 @@
-color: yellow
+color: null
 fieldLayouts:
-  b89c71b8-b04e-4573-8bab-5ec4b1a9dc18:
+  3044aeae-c8ee-4baa-a39d-309da42388a7:
     tabs:
       -
         elementCondition: null
         elements:
+          -
+            elementCondition: null
+            fieldUid: 9a3d509f-0817-4939-ba9d-7bc072e7a2a6 # Plain Text
+            handle: testimonial
+            includeInCards: false
+            instructions: null
+            label: Testimonial
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1660f43c-090a-4aa3-96af-3c7690063ef3
+            userCondition: null
+            warning: null
+            width: 100
           -
             autocapitalize: true
             autocomplete: false
@@ -16,7 +31,7 @@ fieldLayouts:
             includeInCards: false
             inputType: null
             instructions: null
-            label: null
+            label: Name
             max: null
             min: null
             name: null
@@ -30,36 +45,36 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: bc8ad357-4071-4fb1-bb0d-19b6c1eac1aa
+            uid: c75342bb-26bc-4040-8f0c-3ca2be63424f
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             elementCondition: null
-            fieldUid: 389c2236-2701-4809-a0dc-8eec2db373d7 # Text Link
-            handle: null
+            fieldUid: 9a3d509f-0817-4939-ba9d-7bc072e7a2a6 # Plain Text
+            handle: location
             includeInCards: false
             instructions: null
-            label: null
+            label: Location
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: dbd29d2f-443c-47e4-865d-f7d9fc5aa174
+            uid: af606caf-edfe-407b-bdfc-4f2f69ec8274
             userCondition: null
             warning: null
-            width: 100
+            width: 50
         name: Content
-        uid: cc1d8939-3227-4624-bd7c-e5ffff282288
+        uid: b12b0bfc-1189-4ab5-a7d0-b3ae7e6b241e
         userCondition: null
-handle: callToAction
-hasTitleField: false
-icon: comment
-name: 'Call to Action'
+handle: testimonials
+hasTitleField: true
+icon: person-chalkboard
+name: Testimonials
 showSlugField: false
-showStatusField: false
+showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{entryId}'
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

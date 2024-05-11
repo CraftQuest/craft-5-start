@@ -4,17 +4,53 @@ instructions: null
 name: 'Text Link'
 searchable: false
 settings:
-  createButtonLabel: null
-  entryTypes:
-    - e2a5f92b-4394-4126-bb61-58c2f20f29f4 # Text Link
-  includeTableView: false
-  maxEntries: 1
-  minEntries: null
-  pageSize: 50
-  propagationKeyFormat: null
-  propagationMethod: all
-  showCardsInGrid: false
-  viewMode: cards
+  addRowLabel: 'Add a CTA'
+  columns:
+    __assoc__:
+      -
+        - col1
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Link Text'
+            -
+              - handle
+              - linkText
+            -
+              - width
+              - ''
+            -
+              - type
+              - singleline
+      -
+        - col2
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Link URL'
+            -
+              - handle
+              - linkUrl
+            -
+              - width
+              - ''
+            -
+              - type
+              - url
+  defaults:
+    -
+      __assoc__:
+        -
+          - col1
+          - ''
+        -
+          - col2
+          - ''
+  maxRows: 1
+  minRows: null
+  staticRows: false
 translationKeyFormat: null
-translationMethod: site
-type: craft\fields\Matrix
+translationMethod: none
+type: craft\fields\Table

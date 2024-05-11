@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 2e98f8d3-a996-41fd-87cb-45383988bb8f # Testimonials
+handle: testimonials
+maxAuthors: 1
+name: Testimonials
+propagationMethod: all
+siteSettings:
+  d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: # Craft 5
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

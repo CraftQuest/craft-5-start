@@ -1,0 +1,30 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - a7ebfb51-839e-4c13-b61a-cd319fedfaaf # Locations
+handle: locations
+maxAuthors: 1
+name: Locations
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: # Craft 5
+    enabledByDefault: true
+    hasUrls: true
+    template: locations/_entry
+    uriFormat: 'locations/{slug}'
+structure:
+  maxLevels: 1
+  uid: 583c95b7-1157-4dda-a940-1d67cfdf7128
+type: structure

@@ -1,6 +1,6 @@
-color: yellow
+color: null
 fieldLayouts:
-  b89c71b8-b04e-4573-8bab-5ec4b1a9dc18:
+  436ebd1d-85e5-46e9-8bf5-b09599b56599:
     tabs:
       -
         elementCondition: null
@@ -30,13 +30,28 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: bc8ad357-4071-4fb1-bb0d-19b6c1eac1aa
+            uid: 5c037142-83ac-470c-a324-c9fd13402cc2
             userCondition: null
             warning: null
             width: 100
           -
             elementCondition: null
-            fieldUid: 389c2236-2701-4809-a0dc-8eec2db373d7 # Text Link
+            fieldUid: c6d99cf5-e79d-447e-bbfd-299ebd88db00 # Content Builder CK
+            handle: locationContent
+            includeInCards: false
+            instructions: null
+            label: 'Location Content'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d344b847-14b5-4e52-be1c-7be5a1e5a3cb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            elementCondition: null
+            fieldUid: f7467145-3196-4d29-ba2f-d665cef1885a # Images
             handle: null
             includeInCards: false
             instructions: null
@@ -45,21 +60,21 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: dbd29d2f-443c-47e4-865d-f7d9fc5aa174
+            uid: 64399a07-62ad-4fca-987f-6cdb7d5bdd87
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: cc1d8939-3227-4624-bd7c-e5ffff282288
+        uid: 2afd7f9f-3984-4283-9fcc-1ee303dafa02
         userCondition: null
-handle: callToAction
-hasTitleField: false
-icon: comment
-name: 'Call to Action'
-showSlugField: false
-showStatusField: false
+handle: locations
+hasTitleField: true
+icon: map
+name: Locations
+showSlugField: true
+showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{entryId}'
+titleFormat: ''
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

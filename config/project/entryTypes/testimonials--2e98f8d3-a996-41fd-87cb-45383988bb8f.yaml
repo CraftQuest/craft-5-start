@@ -26,7 +26,18 @@ fieldLayouts:
             autocorrect: true
             class: null
             disabled: false
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: 9a3d509f-0817-4939-ba9d-7bc072e7a2a6 # Plain Text
+                  layoutElementUid: 1660f43c-090a-4aa3-96af-3c7690063ef3
+                  operator: notempty
+                  uid: 56e0e325-f459-4aed-b87a-3adf8b2f4d72
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
             id: null
             includeInCards: false
             inputType: null
@@ -50,7 +61,18 @@ fieldLayouts:
             warning: null
             width: 50
           -
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: 9a3d509f-0817-4939-ba9d-7bc072e7a2a6 # Plain Text
+                  layoutElementUid: 1660f43c-090a-4aa3-96af-3c7690063ef3
+                  operator: notempty
+                  uid: 7e747d30-3735-4f2b-bde6-beb2c191fa3e
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: 9a3d509f-0817-4939-ba9d-7bc072e7a2a6 # Plain Text
             handle: location
             includeInCards: false

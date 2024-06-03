@@ -88,7 +88,18 @@ fieldLayouts:
         uid: 5aaf1db6-0af3-41dd-94e1-d9fa3072d8a6
         userCondition: null
       -
-        elementCondition: null
+        elementCondition:
+          class: craft\elements\conditions\entries\EntryCondition
+          conditionRules:
+            -
+              class: craft\fields\conditions\RelationalFieldConditionRule
+              elementId: null
+              fieldUid: 9197bbb6-d851-4b3a-a475-54d3f8e9c462 # Location
+              layoutElementUid: 7ddd712e-f4bf-4d1e-99d5-c9139cea1bee
+              operator: notempty
+              uid: 8acb548a-dc74-42d7-8380-cb6a82285025
+          elementType: craft\elements\Entry
+          fieldContext: global
         elements:
           -
             elementCondition: null

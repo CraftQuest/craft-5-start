@@ -1,1 +1,90 @@
-{{ entry.title }}
+{% extends '_shared/_layout.twig' %}
+{% block main %}
+    <main>
+        <div class="bg-white overflow-hidden">
+            <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+                <div
+                        class="hidden lg:block bg-secondary absolute top-0 bottom-0 left-3/4 w-screen"
+                ></div>
+                <div
+                        class="mx-auto text-base max-w-prose lg:grid lg:grid-cols-2 lg:gap-8 lg:max-w-none"
+                >
+                    <div>
+                        <h1
+                                class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+                        >
+                            {{ entry.title }}
+                        </h1>
+                    </div>
+                </div>
+                <div class="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
+                    <div class="relative lg:row-start-1 lg:col-start-2">
+                        <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
+                            {% for image in entry.images.all() %}
+                                <figure class="mb-8">
+                                    <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
+                                        <img
+                                                class="shadow-lg object-cover object-center lg:rotate-1 border-gray-200 border-8"
+                                                src="{{ image.url() }}"
+                                                alt="{{ image.title }}"
+                                                width="1184"
+                                                height="1376"
+                                        />
+                                    </div>
+                                </figure>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="mt-8 lg:mt-0">
+                        <div class="text-base max-w-prose mx-auto lg:max-w-none">
+                            <p class="text-lg text-gray-500">
+                                {{ entry.longDescription }}
+                            </p>
+                        </div>
+                        {#                        {% for block in entry.contentBuilder.all() %} #}
+                        {#                            {{ block.render }} #}
+                        {#                        {% endfor %} #}
+                        <div
+                                class="mt-5 prose prose-indigo text-gray-500 mx-auto lg:max-w-none lg:row-start-1 lg:col-start-1"
+                        >
+                            {{ entry.contentBuilderCk }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% include "_shared/_locations" %}
+
+        <section class="overflow-hidden md:py-20 lg:py-20 bg-white">
+            <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="relative">
+                    <blockquote class="">
+                        <div
+                                class="max-w-3xl mx-auto text-center text-4xl leading-9 font-bold text-secondary"
+                        >
+                            <p>
+                                &ldquo;The best way to spend my 5 days of annual vacation time
+                                away from the cubicle!&rdquo;
+                            </p>
+                        </div>
+                        <footer class="mt-8">
+                            <div class="md:flex md:items-center md:justify-center">
+                                <div
+                                        class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center"
+                                >
+                                    <div class="text-base font-medium text-gray-900">
+                                        Milton Waddams &nbsp;
+                                    </div>
+                                    <div class="text-base font-medium text-gray-500">
+                                        Austin, TX
+                                    </div>
+                                </div>
+                            </div>
+                        </footer>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

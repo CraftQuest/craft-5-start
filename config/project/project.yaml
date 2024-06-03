@@ -1,4 +1,4 @@
-dateModified: 1715359583
+dateModified: 1717441712
 elementSources:
   craft\elements\Entry:
     -
@@ -18,7 +18,16 @@ elementSources:
       key: singles
       type: native
     -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
       key: 'section:9adfa8da-c1a2-4e77-abfc-a08eae6316da' # Adventures
+      tableAttributes:
+        - postDate
+        - expiryDate
+        - authors
+        - link
       type: native
     -
       defaultSort:
@@ -60,10 +69,12 @@ meta:
   __names__:
     1f955944-b52e-4cf8-bd5a-9b56ace12b65: URL # URL
     2e98f8d3-a996-41fd-87cb-45383988bb8f: Testimonials # Testimonials
+    2f08d64d-902a-47bc-bd59-063906ba28be: 'Adventures Grid' # Adventures Grid
     5dc9e5cb-b638-41cc-9f01-03661aa13021: About # About
     9a3d509f-0817-4939-ba9d-7bc072e7a2a6: 'Plain Text' # Plain Text
     9adfa8da-c1a2-4e77-abfc-a08eae6316da: Adventures # Adventures
     9af4493f-1473-46c6-8dc2-d79d5503d1b7: 'Rich Text' # Rich Text
+    9b32435d-341a-441e-aadb-ce2220c428f3: 'Adventures Landing' # Adventures Landing
     9bebaaa3-6d87-4c75-afc8-f5f75ab950c4: Images # Images
     9c45477d-9c0d-4fb2-aef1-9179c5299949: 'Content Builder' # Content Builder
     13c6c779-31ab-41e7-8332-126768d973d2: 'Rich Text Content' # Rich Text Content
@@ -73,16 +84,20 @@ meta:
     9197bbb6-d851-4b3a-a475-54d3f8e9c462: Location # Location
     4052097c-4aec-4442-af4c-df0a26b20065: 'Craft 5' # Craft 5
     a7ebfb51-839e-4c13-b61a-cd319fedfaaf: Locations # Locations
+    af7d613b-a1db-4085-b3ac-80d44930b95b: 'Locations Landing' # Locations Landing
+    bf302f15-62bb-4400-adf6-e6b377329c22: 'Adventures Grid Small' # Adventures Grid Small
     c3a92b48-89a3-4e38-9bba-392cdfbf35bf: Homepage # Homepage
     c6d99cf5-e79d-447e-bbfd-299ebd88db00: 'Content Builder CK' # Content Builder CK
     c6993518-0e82-4c97-86a2-4e1c53809b3a: Stats # Stats
     d2f46c56-a3c5-486e-a3a7-3cca9c903fbd: 'Call to Action' # Call to Action
-    d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: 'Craft 5' # Craft 5
+    d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: TrailQuest # TrailQuest
+    d745abc3-c8d2-4d72-bb01-463191f64d27: 'Main Nav' # Main Nav
     d223214a-558a-42c8-bb24-9f3173bd142e: Homepage # Homepage
     dbdcea27-48a0-41ef-8122-ada429a38092: Testimonials # Testimonials
     dd1c7eb3-2108-45f2-92fb-5643f822e6a5: 'Content Builder' # Content Builder
     de9912bf-cf02-4036-9107-e326c86f86bf: Adventures # Adventures
     e2a5f92b-4394-4126-bb61-58c2f20f29f4: 'Text Link' # Text Link
+    e5be2a0c-1ff9-4241-85fb-a88a06ba6219: 'Listing Page' # Listing Page
     ece096c6-0d0e-47d3-86e3-b8c859b1a8a9: CTA # CTA
     ed131062-48d0-4cda-abd3-b6ee2ee33130: Locations # Locations
     f0b04f8f-2d8b-4385-8b15-8c41f7bac65a: Simple # Simple
@@ -94,6 +109,15 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  navigation:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.1.0
+  seomatic:
+    edition: standard
+    enabled: true
+    licenseKey: C334BSY169PLL3VUW0ZT40PQ
+    schemaVersion: 3.0.12
 system:
   edition: pro
   live: true

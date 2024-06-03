@@ -1,0 +1,6 @@
+{# CTA Link #}
+<div class="mt-10">
+    {% for cta in entry.textLink %}
+    <a href="{{ cta.linkUrl }}" class="text-base font-medium text-primary">{{ cta.linkText }}<span aria-hidden="true">&rarr;</span> </a>
+    {% endfor %}
+</div>

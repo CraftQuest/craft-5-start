@@ -1,0 +1,11 @@
+fill: null
+format: null
+handle: adventuresGrid
+height: 500
+interlace: none
+mode: crop
+name: 'Adventures Grid'
+position: center-center
+quality: null
+upscale: true
+width: 500

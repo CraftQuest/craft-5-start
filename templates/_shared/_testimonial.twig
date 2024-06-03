@@ -1,0 +1,30 @@
+{% set testimonial = craft.entries.section('testimonials').orderBy('RAND()').one() %}
+<section class="overflow-hidden md:py-20 lg:py-20 bg-white">
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative">
+            <blockquote class="">
+                <div
+                        class="max-w-3xl mx-auto text-center text-4xl leading-9 font-bold text-secondary"
+                >
+                    <p>
+                        &ldquo;{{ testimonial.testimonial }}&rdquo;
+                    </p>
+                </div>
+                <footer class="mt-8">
+                    <div class="md:flex md:items-center md:justify-center">
+                        <div
+                                class="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center"
+                        >
+                            <div class="text-base font-medium text-gray-900">
+                                {{ testimonial.title }} &nbsp;
+                            </div>
+                            <div class="text-base font-medium text-gray-500">
+                                {{ testimonial.location }}
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </blockquote>
+        </div>
+    </div>
+</section>

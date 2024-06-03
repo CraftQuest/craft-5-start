@@ -1,0 +1,31 @@
+{# Locations listing module #}
+<section class="bg-white">
+    <div
+            class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
+    >
+        <div class="pb-5">
+            <h2 class="text-4xl leading-8 font-extrabold text-primary my-6">
+                Trail Running Locations
+            </h2>
+        </div>
+        <div
+                class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols- xl:grid-cols-4 xl:gap-x-6"
+        >
+            {% set locations = craft.entries.section('locations').all() %}
+            {% for locationsSet in locations | batch(4) %}
+                <ul>
+                    {% for location in locationsSet %}
+                        <li class="pb-2">
+                            {% if currentLocationId is defined and currentLocationId == location.id %}
+                                &rarr; {{ location.title }}
+                            {% else %}
+                                <a class="hover:text-secondary text-black underline" href="{{ location.url() }}"
+                                >{{ location.title }}</a>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </div>
+    </div>
+</section>

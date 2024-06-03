@@ -1,0 +1,45 @@
+{#{% set entries = craft.entries#}
+{#    .section(section)#}
+{#    .limit(limit)#}
+{#    .with([#}
+{#        ['location'],#}
+{#        ['images', {#}
+{#            withTransforms: ['adventuresGridSmall']#}
+{#        }]#}
+{#    ])#}
+{#    .all()#}
+{#%}#}
+
+{% set entries = craft.entries
+    .section(section)
+    .limit(limit)
+    .all()
+%}
+<div
+        class="grid grid-cols-1 gap-y-10 sm:grid-cols-2 gap-x-6 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8"
+>
+    {% for entry in entries %}
+        {% set image = entry.images.eagerly().one() %}
+        {% set location = entry.location.eagerly().one() %}
+        <a href="{{ entry.url }}" class="group">
+            <div
+                    class="w-full aspect-w-1 aspect-h-1 bg-gray-200 rounded-lg overflow-hidden xl:aspect-w-8 xl:aspect-h-8"
+            >
+                <img
+                        src="{{ image.url('adventuresGridSmall') }}"
+                        alt="{{ entry.title }}"
+                        class="w-full h-full object-center object-cover group-hover:opacity-75"
+                />
+            </div>
+            <h3 class="mt-4 text-lg font-bold text-gray-900">
+                {{ entry.title }}
+            </h3>
+            <p class="mt-1 text-md font-medium text-gray-900">
+                {{ entry.shortDescription }}
+            </p>
+            <p class="mt-1 text-md font-medium text-gray-500">
+                {{ location.title }}
+            </p>
+        </a>
+    {% endfor %}
+</div>

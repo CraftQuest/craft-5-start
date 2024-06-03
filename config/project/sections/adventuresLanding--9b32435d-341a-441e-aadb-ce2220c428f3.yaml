@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - e5be2a0c-1ff9-4241-85fb-a88a06ba6219 # Listing Page
+handle: adventuresLanding
+maxAuthors: 1
+name: 'Adventures Landing'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  d9d1ae21-b5ed-442d-bc28-0e3aa8b8c39b: # TrailQuest
+    enabledByDefault: true
+    hasUrls: true
+    template: adventures/index.twig
+    uriFormat: adventures
+type: single

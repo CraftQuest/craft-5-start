@@ -1,0 +1,25 @@
+{% extends  '_shared/_layout' %}
+{% block main %}
+    <main>
+        <div class="bg-white">
+            <div
+                    class="max-w-2xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8"
+            >
+                <div class="pb-5">
+                    <h2 class="text-4xl leading-8 font-extrabold text-primary">
+                        {{ entry.title }}
+                    </h2>
+                    <p class="mt-2 max-w-4xl text-md text-gray-900">
+                        {{ entry.tagline }}
+                    </p>
+                </div>
+                {% include "_shared/_locationsGrid" with {
+                    limit: 10,
+                    section: 'locations'
+                } %}
+            </div>
+        </div>
+        {% include "_shared/_testimonial" %}
+        {% include "_shared/_locations" %}
+    </main>
+{% endblock %}

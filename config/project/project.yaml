@@ -1,4 +1,4 @@
-dateModified: 1713475759
+dateModified: 1720468122
 email:
   fromEmail: ryan@craftquest.io
   fromName: 'House Quest'
@@ -22,7 +22,7 @@ system:
   live: true
   name: 'Craft 5'
   retryDuration: null
-  schemaVersion: 5.0.0.20
+  schemaVersion: 5.0.0.21
   timeZone: America/Chicago
 users:
   allowPublicRegistration: false
